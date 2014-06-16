@@ -1,27 +1,36 @@
 require "fileutils"
 
 DOTFILES_DIR = File.expand_path File.dirname(__FILE__)
+BACKUP_DIR = "/tmp/dotfiles-backup-#{Time.now.strftime('%Y%m%d%H%M%S')}"
+
+class MyUtils
+  def self.setup_dotfile(source_name, target_dir)
+    puts "#{source_name}"
+
+    FileUtils.mkdir_p BACKUP_DIR
+
+    source_dir = File.expand_path(source_name, DOTFILES_DIR)
+    backup_dir = File.expand_path(source_name, BACKUP_DIR)
+
+    puts "  - source: #{source_dir}"
+    puts "  - backup: #{backup_dir}"
+
+    FileUtils.mv target_dir, backup_dir if File.exists? target_dir
+
+    puts "  - target: #{target_dir}"
+
+    FileUtils.ln_sf source_dir, target_dir
+  end
+end
 
 task :setup do
-begin
-  # backup dir for existing files
-  backup_dir = "/tmp/dotfiles-backup-#{Time.now.strftime('%Y%m%d%H%M%S')}"
-  mkdir backup_dir
+  MyUtils.setup_dotfile "oh-my-zsh", File.expand_path("~/.oh-my-zsh/custom")
 
-  # oh-my-zsh
-  oh_my_zsh_custom_dir = File.expand_path "~/.oh-my-zsh/custom"
-  mv oh_my_zsh_custom_dir, "#{backup_dir}/oh-my-zsh" if File.exists?(oh_my_zsh_custom_dir)
-  ln_s "#{DOTFILES_DIR}/oh-my-zsh", oh_my_zsh_custom_dir
-
-
-  # (Dir["*"] + Dir[".*"] - [".", "..", "Rakefile", "LICENSE", "README.rdoc", ".git"]).each do |dotfile|
-  #   `ln -nsf #{File.expand_path dotfile} ~/.#{dotfile}`
-  # end
+  (Dir["*"] - Dir["oh-my-zsh", "LICENSE", "README*", "Rakefile"]).each do |dotfile|
+    MyUtils.setup_dotfile dotfile, File.expand_path("~/.#{dotfile}")
+  end
 
   # `chsh -s /bin/zsh`
-rescue Exception => e
-  puts e.message
-end
 end
 
 task :default => :setup

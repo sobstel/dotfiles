@@ -1,0 +1,13 @@
+snippet tr:
+	<${1:code} lang="en">${2:value}</${1:value}>
+	<${1:value} lang="pl">${2:value}</${1:value}>
+
+snippet try
+	try 
+	{
+		${3:code}
+	} 
+	catch (${1:value} $e)
+	{
+		throw new ${2:value}($e->getMessage());
+	}

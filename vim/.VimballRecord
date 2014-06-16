@@ -1,0 +1,4 @@
+supertab.vba: call delete('/home/nigro/.vim/doc/supertab.txt')|call delete('/home/nigro/.vim/plugin/supertab.vim')
+LargeFile.vba: call delete('/home/nigro/.vim/plugin/LargeFile.vim')|call delete('/home/nigro/.vim/doc/LargeFile.txt')
+checksyntax.vba: call delete('/home/nigro/.vim/doc/checksyntax.txt')|call delete('/home/nigro/.vim/plugin/checksyntax.vim')|call delete('/home/nigro/.vim/autoload/checksyntax.vim')
+gitdiff.vba: call delete('/home/nigro/.vim/plugin/gitdiff.vim')
