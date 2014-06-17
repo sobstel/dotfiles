@@ -6,7 +6,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 DISABLE_UPDATE_PROMPT=true
 
 # oh-my-zsh
-plugins=(git osx sobstel)
+plugins=(git osx composer)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
@@ -15,9 +15,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X1
 
 # brew
 export PATH="$(brew --prefix)/bin:$PATH"
-
-# local bin
-export PATH="/Users/przemek.sobstel/bin:$PATH"
 
 # node
 export NODE_PATH="/usr/local/lib/node"
