@@ -20,12 +20,13 @@ export PATH="$(brew --prefix)/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
-# rebenv
+# rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # php
-export PATH="$PATH:/usr/local/Cellar/php54/5.4.26/bin"
+export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+export PATH="~/.composer/vendor/bin:$PATH"
 
 # opts: misc
 setopt hist_ignore_all_dups
@@ -33,4 +34,8 @@ setopt correct
 
 # opessl
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
+# aliases
+alias sf="php app/console"
+alias sf2="sf"
 
