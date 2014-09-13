@@ -26,7 +26,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # php
 export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
-export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # opts: misc
 setopt hist_ignore_all_dups
