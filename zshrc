@@ -5,6 +5,9 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 DISABLE_UPDATE_PROMPT=true
 
+autoload -U select-word-style
+select-word-style bash
+
 # oh-my-zsh
 plugins=(git osx composer)
 source $ZSH/oh-my-zsh.sh
@@ -32,10 +35,16 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 setopt hist_ignore_all_dups
 setopt correct
 
-# opessl
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
 # aliases
 alias sf="php app/console"
 alias sf2="sf"
+alias rake="noglob rake"
+
+# locales
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# auto-jump
+. `brew --prefix`/etc/profile.d/z.sh
 
