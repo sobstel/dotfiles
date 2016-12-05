@@ -41,7 +41,7 @@ function service {
       run_launchctl ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist $1 $2
       ;;
     php )
-      run_launchctl ~/Library/LaunchAgents/homebrew.mxcl.php55.plist $1 $2
+      run_launchctl ~/Library/LaunchAgents/homebrew.mxcl.php70.plist $1 $2
       ;;
     * )
       echo "Service ($1) not found."
