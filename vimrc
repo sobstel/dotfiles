@@ -7,6 +7,7 @@ set expandtab
 set showmatch       " Highlight closing ), >, }, ], etc...
 set ruler           " Show row,col in cmd line
 set hlsearch        " Keep previous search highlighted
+set spell 
 
 set ignorecase      " Ignore case in searches
 set smartcase       " Don't ignore case if search string contains uppercase letters
