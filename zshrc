@@ -1,26 +1,28 @@
-# main config
-ZSH=$HOME/.oh-my-zsh
+# ZSH configuration
+
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="sorin"
+
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
-DISABLE_UPDATE_PROMPT=true
+zstyle ':completion:*:*:docker:*' option-stacking yes
+#DISABLE_UPDATE_PROMPT=true
 
 autoload -U select-word-style
 select-word-style bash
 
-# oh-my-zsh
-plugins=(git osx)
-source $ZSH/oh-my-zsh.sh
-unsetopt correct_all
+plugins=(docker git rails yarn)
 
-# main path
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
+source $ZSH/oh-my-zsh.sh
+
+#unsetopt correct_all
+
+# User configuration
+
+export EDITOR='vim'
 
 # brew
 export PATH="$(brew --prefix)/bin:$PATH"
-
-# node
-#export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 # nodeenv
 eval "$(nodenv init -)"
