@@ -8,9 +8,6 @@
   interactive = auto
   status = auto
   branch = auto
-[user]
-	name = Przemek Sobstel
-	email = przemek@sobstel.org
 [alias]
   st = status
   ci = commit
@@ -22,17 +19,8 @@
   ll = log --stat --abbrev-commit
 [push]
   default = current
+[user]
+  name = Przemek Sobstel
+  email = przemek@sobstel.org
 [github]
   user = sobstel
-[filter "media"]
-  required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
-[filter "hawser"]
-  clean = git hawser clean %f
-  smudge = git hawser smudge %f
-  required = true
-[filter "lfs"]
-  clean = git lfs clean %f
-  smudge = git lfs smudge %f
-  required = true

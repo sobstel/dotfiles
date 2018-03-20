@@ -1,4 +1,4 @@
 
-`cp ~/Projects/dotfiles/LaunchAgents/com.startup.plist ~/Library/LaunchAgents/`
+`cp LaunchAgents/org.sobstel.startup.plist ~/Library/LaunchAgents/`
 
-`launchctl load -w ~/Library/LaunchAgents/com.startup.plist`
+`launchctl load -w ~/Library/LaunchAgents/org.sobstel.startup.plist`
