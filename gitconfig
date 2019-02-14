@@ -1,13 +1,14 @@
 [core]
   whitespace = trailing-space,tab-in-indent,cr-at-eol,space-before-tab
 	excludesfile = /Users/sobstel/.gitignore_global
-  pager = less -r
+	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
 [color]
   diff = auto
   interactive = auto
   status = auto
   branch = auto
+	ui = true
 [alias]
   st = status
   ci = commit
@@ -24,3 +25,15 @@
   email = przemek@sobstel.org
 [github]
   user = sobstel
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
