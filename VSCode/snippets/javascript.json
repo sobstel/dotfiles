@@ -1,0 +1,220 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"PureComponent class": {
+		"prefix": "rpc",
+		"body": [
+			"import React, { PureComponent } from 'react';",
+			"",
+			"export default class extends PureComponent {",
+			"	 render() {",
+			"	   return $2",
+			"  }",
+			"}",
+			""
+		]
+	},
+	"Import from module": {
+		"prefix": "imp",
+		"body": [
+			"import $2 from '${1:module}';"
+		]
+	},
+	"Import from module (destructing)": {
+		"prefix": "imd",
+		"body": [
+			"import { $2 } from '${1:module}';"
+		]
+	},
+	"Import React and PureComponent": {
+		"prefix": "impc",
+		"body": [
+			"import React, { PureComponent } from 'react';"
+		]
+	},
+	"Import PropTypes": {
+		"prefix": "impt",
+		"body": [
+			"import PropTypes from 'prop-types';"
+		]
+	},
+	"Import from react-native": {
+		"prefix": "imrn",
+		"body": [
+			"import { $1 } from 'react-native';"
+		]
+	},
+	"Import Redux": {
+		"prefix": "imrx",
+		"body": [
+			"import { connect } from 'react-redux';"
+		]
+	},
+	"Import React Timeout": {
+		"prefix": "imrt",
+		"body": [
+			"import ReactTimeout from 'react-timeout';"
+		]
+	},
+	"Import Animatable": {
+		"prefix": "ima",
+		"body": [
+			"import * as Animatable from 'react-native-animatable';"
+		]
+	},
+	"Import styled-components": {
+		"prefix": "imsc",
+		"body": [
+			"import styled from 'styled-components';"
+		]
+	},
+	"Import hydro component": {
+		"prefix": "imhc",
+		"body": [
+			"import { $1 } from 'react-native-hydro-kit';"
+		]
+	},
+	"Import config": {
+		"prefix": "imhl",
+		"body": [
+			"import { $1 } from 'react-native-hydro-kit/lib';"
+		]
+	},
+	"Import styled-helpers": {
+		"prefix": "imsh",
+		"body": [
+			"import { rem, vw } from 'react-native-hydro-kit/lib';"
+		]
+	},
+	"Import volt component": {
+		"prefix": "imvc",
+		"body": [
+			"import $1 from '@volt/components/$1';"
+		]
+	},
+	"Import volt duck": {
+		"prefix": "imvd",
+		"body": [
+			"import { $2 } from '@volt/ducks/$1';"
+		]
+	},
+	"Import volt script": {
+		"prefix": "imvt",
+		"body": [
+			"import _ from '@volt/script';"
+		]
+	},
+	"Import volt images": {
+		"prefix": "imvi",
+		"body": [
+			"import $1Images from '@volt-assets/images/$1';"
+		]
+	},
+	"static PropTypes": {
+		"prefix": "spt",
+		"body": [
+			"static propTypes = {",
+			"  $1",
+			"};",
+			""
+		]
+	},
+	"static defaultProps": {
+		"prefix": "sdp",
+		"body": [
+			"static defaultProps = {",
+			"  $1",
+			"};",
+			""
+		]
+	},
+	"componentDidMount": {
+		"prefix": "cdm",
+		"body": [
+			"componentDidMount() {",
+			"  $1",
+			"}",
+			""
+		]
+	},
+	"componentWillUnmount": {
+		"prefix": "cwu",
+		"body": [
+			"componentWillUnmount() {",
+			"  $1",
+			"}",
+			""
+		]
+	},
+	"componentWillReceiveProps": {
+		"prefix": "cwrp",
+		"body": [
+			"// DEPREACTED: use static getDerivedStateFromProps instead (since React 16.3)",
+			"componentWillReceiveProps(nextProps) {",
+			"  $1",
+			"}",
+			""
+		]
+	},
+	"Redux mapStateToProps": {
+		"prefix": "rxsp",
+		"body": [
+			"const mapStateToProps = state => ({",
+			"  ${1}",
+			"});",
+			"",
+		]
+	},
+	"Redux mapDispatchToProps": {
+		"prefix": "rxdp",
+		"body": [
+			"const mapDispatchToProps = {",
+			"  ${1}",
+			"}",
+			"",
+		]
+	},
+	"Redux connect": {
+		"prefix": "rxc",
+		"body": [
+			"export default connect(mapStateToProps, mapDispatchToProps)(",
+			""
+		]
+	},
+	"Redux duck": {
+		"prefix": "rxd",
+		"body": [
+			"import { createAction, handleActions } from 'redux-actions';",
+			"import { combineLogic } from 'react-native-hydro-kit/lib';",
+			"// import { createSelector } from 'reselect';",
+			"",
+			"// ACTION CREATORS",
+			"",
+			"export const action = createAction('ACTION');",
+			"",
+			"// LOGIC",
+			"",
+			"export const logic = combineLogic({});",
+			"",
+			"// INITIAL STATE",
+			"",
+			"const initialState = {};",
+			"",
+			"// REDUCER",
+			"",
+			"export default handleActions({}, initialState);",
+			""
+		]
+	}
+}
