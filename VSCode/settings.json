@@ -3,6 +3,7 @@
     "editor.fontFamily": "SF Mono",
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
+    "editor.formatOnSave": true,
     "files.trimTrailingWhitespace": true,
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
@@ -47,22 +48,30 @@
         "suppressShowKeyBindingsNotice": true
     },
     "explorer.confirmDragAndDrop": false,
-    "todo-tree.tags": [
-        "TODO",
-        "FIXME",
-        "@todo"
-    ],
-    "todo-tree.defaultHighlight": {
-        "foreground": "green",
-        "type": "none"
-    },
-    "todo-tree.customHighlight": {
-        "TODO": {},
-        "FIXME": {},
-        "@todo": {}
-    },
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
     "terminal.integrated.rendererType": "dom",
     "ruby.rubocop.onSave": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "search.exclude": {
+        "**/.next": true
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.packageManager": "yarn",
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {},
+        "FIXME": {},
+        "@todo": {}
+    },
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "@todo"
+    ],
+    "editor.accessibilitySupport": "off",
 }
